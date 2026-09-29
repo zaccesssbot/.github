@@ -1,0 +1,17 @@
+name: Improvement
+description: Refine something that already exists, not a new feature
+title: "refactor: "
+labels: ["polish"]
+body:
+  - type: textarea
+    id: current
+    attributes:
+      label: What exists now?
+    validations:
+      required: true
+  - type: textarea
+    id: better
+    attributes:
+      label: How should it work instead?
+    validations:
+      required: true
