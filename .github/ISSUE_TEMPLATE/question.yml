@@ -1,0 +1,11 @@
+name: Question
+description: Ask something that is not a bug or a feature request
+title: "question: "
+labels: ["question"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: What would you like to know?
+    validations:
+      required: true
