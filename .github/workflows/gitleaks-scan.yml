@@ -1,0 +1,31 @@
+# scans this repository for hard-coded secrets and credentials on every PR targeting main and
+# every push. The scheduled workflow only uses ACCESS_TOKEN (a read only PAT), but this is
+# still a tripwire that fails loudly if any credential ever gets committed by mistake.
+
+name: Gitleaks Scan
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  gitleaks:
+    name: Gitleaks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+
+      - name: Install Gitleaks
+        run: |
+          curl -sSfL "https://github.com/gitleaks/gitleaks/releases/download/v8.21.2/gitleaks_8.21.2_linux_x64.tar.gz" \
+            | tar -xz -C /tmp gitleaks
+          sudo mv /tmp/gitleaks /usr/local/bin/gitleaks
+
+      - name: Run Gitleaks
+        run: gitleaks detect --no-git --redact --exit-code=1
