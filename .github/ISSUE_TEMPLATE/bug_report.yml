@@ -2,6 +2,7 @@ name: Bug report
 description: Report something broken
 title: "fix: "
 labels: ["bug"]
+assignees: [zaccesss]
 body:
   - type: textarea
     id: expected

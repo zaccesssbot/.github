@@ -1,6 +1,6 @@
 # scans this repository for hard-coded secrets and credentials on every PR targeting main and
-# every push. The scheduled workflow only uses ACCESS_TOKEN (a read only PAT), but this is
-# still a tripwire that fails loudly if any credential ever gets committed by mistake.
+# every push. The repository holds no secrets of its own, so this is a tripwire that fails loudly
+# if a credential is ever committed by mistake. It also runs by hand from the Actions tab.
 
 name: Gitleaks Scan
 
@@ -8,6 +8,7 @@ on:
   pull_request:
     branches: [main]
   push:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -19,7 +20,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
       - name: Install Gitleaks
         run: |
