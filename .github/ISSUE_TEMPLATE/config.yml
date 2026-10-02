@@ -4,6 +4,15 @@ contact_links:
   - name: This is an automation account
     url: https://github.com/zaccesss
     about: For anything not about this account's own repositories, see the main account
+  - name: Code of conduct
+    url: https://github.com/zaccesss/code-of-conduct
+    about: The standards expected for any interaction on these repositories
+  - name: Contributing guide
+    url: https://github.com/zaccesss/contribute
+    about: How to report a bug, suggest a change or open a pull request
+  - name: Accessibility statement
+    url: https://github.com/zaccesss/accessibility
+    about: The owner's shared accessibility statement, which this account's repositories follow. It also says how to report a barrier
   - name: Security issue
     url: https://isaacadjei.me/security-policy
     about: Report security issues privately, do not open a public issue

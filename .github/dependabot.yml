@@ -1,0 +1,20 @@
+# weekly update PRs for the GitHub Actions this repository's two workflows pin. Major version
+# bumps are ignored, since a breaking change should never land automatically.
+
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+      - automated
+    commit-message:
+      prefix: chore
+      include: scope
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - version-update:semver-major

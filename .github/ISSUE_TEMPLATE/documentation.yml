@@ -2,6 +2,7 @@ name: Documentation
 description: Something missing, unclear or wrong in the docs
 title: "docs: "
 labels: ["documentation"]
+assignees: [zaccesss]
 body:
   - type: input
     id: where

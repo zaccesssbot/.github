@@ -2,6 +2,7 @@ name: Improvement
 description: Refine something that already exists, not a new feature
 title: "refactor: "
 labels: ["polish"]
+assignees: [zaccesss]
 body:
   - type: textarea
     id: current

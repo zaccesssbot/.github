@@ -5,8 +5,9 @@ to other people's projects.
 
 ## Automation repositories
 
-These are not open to feature requests or design changes. A genuine bug report is welcome, see
-[SECURITY.md](SECURITY.md) for a security issue instead of an issue.
+These are not open to feature requests or design changes. A genuine bug report is welcome. An
+accessibility barrier counts as a bug (see [ACCESSIBILITY.md](ACCESSIBILITY.md)). For a security
+issue, follow [SECURITY.md](SECURITY.md) instead of opening an issue.
 
 ## Forked repositories
 
@@ -16,4 +17,4 @@ requests to the original project rather than this fork.
 ## The shared guide
 
 > [!NOTE]
-> One shared contributing guide covers every project of mine: [zaccesss/contribute](https://github.com/zaccesss/contribute) or on [my site](https://isaacadjei.me/contribute). This file takes precedence where the two differ.
+> One shared contributing guide covers every project of the owner's: [zaccesss/contribute](https://github.com/zaccesss/contribute) or on [the website](https://isaacadjei.me/contribute). This file takes precedence where the two differ.
